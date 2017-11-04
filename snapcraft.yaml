@@ -1,0 +1,25 @@
+
+name: inexor-flex
+icon: "logo_rendered.png"
+version: "0.9.0"
+summary: Fast classic gameplay crossed with modern technology.
+description: |
+    Cooperatively create levels with the built-in map editor.
+    Master manic multiplayer matches.
+    Made with love, not money.
+    It's free and open source.
+
+grade: stable
+confinement: devmode
+
+apps:
+  inexor-flex:
+    command: inexor-flex
+    plugs: [opengl, pulseaudio, network, network-bind, home, browser-support]
+
+parts:
+  inexor-flex:
+    plugin: nodejs
+    node-engine: 7.10.1
+    node-packages:
+      - "@inexorgame/inexor-flex"
