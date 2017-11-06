@@ -1,7 +1,7 @@
 
 name: inexor-flex
 icon: "logo_rendered.png"
-version: "0.9.0"
+version: "0.9.0-preview"
 summary: Fast classic gameplay crossed with modern technology.
 description: |
     Cooperatively create levels with the built-in map editor.
@@ -9,7 +9,7 @@ description: |
     Made with love, not money.
     It's free and open source.
 
-grade: stable
+grade: devel
 confinement: devmode
 
 apps:
@@ -23,3 +23,7 @@ parts:
     node-engine: 7.10.1
     node-packages:
       - "@inexorgame/inexor-flex"
+    build-packages:
+      - python
+      - build-essential
+      - libssl-dev

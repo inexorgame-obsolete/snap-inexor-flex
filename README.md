@@ -8,8 +8,15 @@ If you're not on linux we recommend using the Docker method as described in the 
 
 ```bash
 # from the current directory
-docker pull snapcore/snapcraft
-docker run -v $PWD:$PWD -w $PWD snapcore/snapcraft snapcraft
+docker pull snapcraft/xenial-amd64 # or an alternative architecture. Check out https://hub.docker.com/u/snapcraft/
+docker run -v $PWD:$PWD -w $PWD snapcraft/xenial-amd64 snapcraft
 ```
 
-This snap is automagically compiled and published to the [uAppExplorer](https://uappexplorer.com) using Launchpad.
+In the future this snap will be automagically compiled and published to the [uAppExplorer](https://uappexplorer.com) using Launchpad.
+
+## Installing devel-grade snaps
+The manually released devel-grade snaps can only be installed in _dangerous_ mode. Run:
+
+```
+sudo snap install inexor-flex_0.9.0 --dangerous
+```
