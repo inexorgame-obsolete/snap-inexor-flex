@@ -27,4 +27,4 @@ parts:
       - python
       - build-essential
       - libssl-dev
-      - libcurl-dev
+      - libcurl4-openssl-dev
