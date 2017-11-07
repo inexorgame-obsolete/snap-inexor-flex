@@ -8,8 +8,8 @@ before_script:
   - docker pull snapcraft/xenial-amd64
 
 script:
-  - docker run snapcraft/xenial-amd64 apt-get update
-  - docker run -v $PWD:$PWD -w $PWD snapcraft/xenial-amd64 snapcraft
+  - docker build .
+  - docker run . # that's retarded
   - ls
 
 deploy:
