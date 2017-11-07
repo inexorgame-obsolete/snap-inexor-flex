@@ -6,9 +6,10 @@ python:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y snapd snap-confine
+  - sudo apt-get install -y snapcraft
 
 install:
-  - pip install snapcraft
+  - pip install snapcraft --upgrade
 
 script:
   - snapcraft
